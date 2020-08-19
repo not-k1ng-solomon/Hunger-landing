@@ -7,8 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <!--    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Roboto+Slab:wght@100;300;500;700;800&display=swap"
-              rel="stylesheet">-->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/d3779e6cc5.js" crossorigin="anonymous"></script>
@@ -21,13 +20,13 @@
                 <li class="navbar-list__item"><a href="#">HOME</a></li>
                 <li class="navbar-list__item"><a href="#">ABOUT</a></li>
                 <li class="navbar-list__item"><a href="#">TEAM</a></li>
-                <li class="navbar-list__item"><a href="#">BOOKING</a></li>
+                <li class="navbar-list__item navbar-list__item_last-left"><a href="#">BOOKING</a></li>
             </ul>
             <ul class="navbar-list">
-                <li class="navbar-list__item"><a href="#">MENU</a></li>
-                <li class="navbar-list__item"><a href="#">GALERIE</a></li>
-                <li class="navbar-list__item"><a href="#">EVENTS</a></li>
-                <li class="navbar-list__item"><a href="#">CONTACT</a></li>
+                <li class="navbar-list__item navbar-list__item_first-left navbar-list__item_right"><a href="#">MENU</a></li>
+                <li class="navbar-list__item navbar-list__item_right"><a href="#">GALERIE</a></li>
+                <li class="navbar-list__item navbar-list__item_right"><a href="#">EVENTS</a></li>
+                <li class="navbar-list__item navbar-list__item_right navbar-list__item_last-right"><a href="#">CONTACT</a></li>
             </ul>
         </nav>
         <div class="header">
@@ -35,22 +34,30 @@
                 <p>Mon - Fri: 8PM - 10PM, Sat - Sun: 8PM - 3AM</p>
             </div>
             <div class="header__main">
-                <h1><span>RESTAURANT</span>hungry people</h1>
-                <button class="btn header__btn btn_yellow">BOOK TABLE</button>
-                <button class="btn header__btn">EXPLORE</button>
-                <div class="wrap-icons">
-                    <div class="header_down-circe">
-                        <i class="fa"></i>
+                <h1 class="header__main-title"><span>RESTAURANT</span>hungry people</h1>
+                <div class="header__main-yellow-hr">
+
+                </div>
+                <div class="header__btn">
+                    <button class="btn header__btn-item btn_yellow">BOOK TABLE</button>
+                    <button class="btn header__btn-item">EXPLORE</button>
+                </div>
+                <div class="header__down wrap-icons">
+                    <div class="header__down-circe">
+                        <a href="#"><i class="fas fa-angle-down"></i></a>
                     </div>
                 </div>
+                <div class="header__main-line-top"></div>
+                <div class="header__main-line-bottom"></div>
             </div>
             <div class="header__social">
-                <div class="wrap-icons"><i class="fa"></i></div>
-                <div class="wrap-icons"><i class="fa"></i></div>
-                <div class="wrap-icons"><i class="fa"></i></div>
+                <div class="wrap-icons"><a href="#"><i class="fab fa-facebook-f"></i></a></div>
+                <div class="wrap-icons"><a href="#"><i class="fab fa-twitter"></i></a></div>
+                <div class="wrap-icons"><a href="#"><i class="fab fa-instagram"></i></a></div>
             </div>
         </div>
     </div>
+    <div id="header__svg"><img src="img/helm.svg" alt=""></div>
 </header>
 <section id="about" class="page">
     <div class="wrap">
