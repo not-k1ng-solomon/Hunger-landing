@@ -68,8 +68,8 @@ gulp.task('img', () => {
         .pipe(gulp.dest('public/img'));
 });
 gulp.task('fonts', () => {
-    return gulp.src('src/img/**/*.+(css|eot|otf|svg|ttf|woff)')
-        .pipe(gulp.dest('public/img'));
+    return gulp.src('src/fonts/**/*.+(css|eot|otf|svg|ttf|woff)')
+        .pipe(gulp.dest('public/fonts'));
 });
 
 gulp.task('serve', () => {

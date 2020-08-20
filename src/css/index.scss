@@ -21,7 +21,7 @@ html{
   font-size: 12px;
 }
 body {
-  color: #202020;
+  color: #333333;
   padding: 0;
   margin: 0;
 }
@@ -30,6 +30,24 @@ a {
   text-decoration: none;
 }
 
+.page{
+  &_bg-img-tomato{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(../img/tomato.jpg) 0 -584px no-repeat;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-size: cover;
+    position: relative;
+    color: #f8f8f8;
+  }
+  &_bg-img-eggplant{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(../img/eggplant.jpg) 0 -584px no-repeat;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-size: cover;
+    position: relative;
+    color: #f8f8f8;
+  }
+}
 .btn{
   cursor: pointer;
   min-width: 190px;
@@ -53,6 +71,7 @@ a {
     margin-bottom: -2px;
   }
 }
+
 
 .wrap{
   max-width: 1200px;
@@ -265,5 +284,319 @@ header{
   100% {
     -moz-box-shadow: 0 0 0 0 rgba(255,255,255, 0);
     box-shadow: 0 0 0 0 rgba(255,255,255, 0);
+  }
+}
+
+.container{
+  display: flex;
+  //align-items: center;
+  height: 633px;
+  justify-content: space-between;
+  position: relative;
+  &__title{
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 1.17rem;
+    letter-spacing: 0.5em;
+
+    text-align: center;
+    text-transform: uppercase;
+    /* or 117% */
+    position: absolute;
+    align-items: center;
+    top: 30px;
+    left: calc(50% - 54px);
+  }
+  &__footer{
+    position: absolute;
+    align-items: center;
+    bottom: 30px;
+    left: calc(50% - 240px);
+    color: rgba(51, 51, 51, 0.5);
+    font-size: 12px;
+    line-height: 12px;
+    span{
+      font-weight: 700;
+    }
+  }
+
+}
+
+.title{
+  font-family: 'Banny Round',Serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 3rem;
+  line-height: 4rem;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  //position: relative;
+  &__hr{
+
+    //position: absolute;
+    display: block;
+    margin:10px auto 0 auto;
+    width: 60px;
+    height: 5px;
+    background-color: $yellow;
+    border-radius: 5px;
+    border: none;
+  }
+}
+.subtitle{
+  margin-top: 0;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 2.333rem;
+}
+.desc{
+  font-weight: 500;
+  font-size: 1.17rem;
+  line-height: 2rem;
+}
+.content{
+  padding: 172px 0 0;
+  flex-basis: 50%;
+  text-align: center;
+}
+.image-composition{
+  text-align: right;
+  flex-basis: 45%;
+  position: relative;
+  width: 100%;
+  &_position-left{
+    padding-left: 105px;
+  }
+  &__wrap{
+    margin-top: 95px;
+    margin-right: 115px;
+    width: 448px;
+    height: 448px;
+    overflow: hidden;
+    position: relative;
+    filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.7));
+    border-radius: 5px;
+    &_position-left{
+      margin-right: 0;
+    }
+  }
+  &__main{
+    width: auto;
+    height: 448px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    border-radius: 5px;
+
+  }
+  &__figure{
+    position: absolute;
+    right: 0;
+    top: calc(50% - 118px);
+    width: 235px;
+    height: 235px;
+    border: 20px solid #E8C300;
+    box-sizing: border-box;
+    filter: drop-shadow(0px 0px 100px rgba(0, 0, 0, 0.5));
+    border-radius: 5px;
+    &_position-left{
+      right: unset;
+      left: 0;
+    }
+  }
+}
+
+.book{
+  padding-left: 50px;
+  .content{
+    padding-top: 114px;
+    flex-basis: 46%;
+  }
+  &__btn{
+    width: 100%;
+  }
+  .image-composition__wrap{
+    margin-top: 90px;
+    margin-right: 103px;
+  }
+  .image-composition__main{
+
+  }
+  .image-composition__figure{
+    width: 212px;
+    height: 212px;
+  }
+}
+.form{
+  padding: 8px 0;
+  &__group{
+    display: flex;
+    justify-content: space-between;
+    margin: 2px 0;
+    &-item{
+      margin-right: 10px;
+      &_last{
+        margin-right: 0;
+      }
+    }
+  }
+  &__input{
+    background: #E5E5E5;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+    text-align: center;
+    font-style: normal;
+    font-weight: 500;
+    padding: 18px 0;
+    font-size: 1.17rem;
+    line-height: 1.6rem;
+    align-items: center;
+    text-indent: 20px;
+    color: rgba(51, 51, 51, 0.5);
+    &:focus{
+      outline: none;
+    }
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+}
+
+#specialties{
+  .container{
+    display: block;
+  }
+  .carousel{
+    &__item{
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+    }
+    &__image-composition-figure{
+      height: 248px;
+      top: calc(50% - 78px);
+
+    }
+  }
+}
+.slick-track{
+  margin: 0;
+}
+.slick-list, .slick-track{
+  position: unset;
+}
+.slick-dots {
+  margin-top: 37px;
+  right: 0;
+  top: 30%;
+  text-align: right;
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+
+  & > li {
+    &.slick-active {
+      & > button {
+        background-color: #f8f8f8;
+      }
+    }
+    margin: 0 5px;
+    & > button {
+      text-indent: -9999px;
+      border-radius: 50%;
+      border: none;
+      width: 5px;
+      height: 5px;
+      background: rgba(255, 255, 255, 0.5);
+      padding: 5px 5px 5px 5px;
+      margin-right: 10px;
+      font-size: 0;
+      line-height: 8px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
+#menu{
+  //height: 600px;
+  text-align: center;
+}
+.menubar{
+  padding: 60px 0;
+  .subtitle{
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  &-price{
+    display: flex;
+    justify-content: space-between;
+    &__box{
+      flex-basis: 30%;
+      &-item{
+        text-align: left;
+        padding: 15px 0;
+      }
+    }
+    &__name{
+      font-family: 'Banny Round', Serif;
+      font-weight: 700;
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+      overflow: hidden;
+      margin: 0;
+      &:after {
+        content:'.....................';
+        letter-spacing: 5px;
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+      span:first-of-type {
+        float:left;
+        margin-right: 10px;
+      }
+      span:last-of-type {
+        float:right;
+        margin-left: 10px;
+      }
+    }
+    &__desk{
+      margin: 3px 0 0 0;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      color: rgba(51, 51, 51, 0.5);
+
+    }
+  }
+
+  &-list{
+    margin: 50px 0 40px 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    &__item{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-width: 120px;
+      min-height: 50px;
+      border-right: 1px solid rgba(51, 51, 51, 0.2);
+      &_last{
+        border-right: none;
+      }
+    }
   }
 }
