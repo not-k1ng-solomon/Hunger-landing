@@ -305,7 +305,8 @@ header{
     position: absolute;
     align-items: center;
     top: 30px;
-    left: calc(50% - 54px);
+    width: 100%;
+    //left: calc(50% - 54px);
   }
   &__footer{
     position: absolute;
@@ -317,6 +318,9 @@ header{
     line-height: 12px;
     span{
       font-weight: 700;
+    }
+    &_while{
+      color: rgba(255, 255, 255, 0.5);
     }
   }
 
@@ -330,6 +334,8 @@ header{
   line-height: 4rem;
   text-transform: uppercase;
   margin-bottom: 10px;
+  width: 100%;
+  text-align: center;
   //position: relative;
   &__hr{
 
@@ -404,6 +410,36 @@ header{
     &_position-left{
       right: unset;
       left: 0;
+    }
+  }
+  &__textarea{
+    position: absolute;
+    writing-mode: vertical-lr;
+    display: flex;
+    height: 100%;
+    width: 75px;
+    background-color: #000;
+    align-items: center;
+    font-family: 'Banny Round', Serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 1rem;
+    text-indent: 20px;
+    text-transform: uppercase;
+    &-right{
+      justify-content: left;
+      right: 0;
+      p{
+        //transform: rotate(180deg);
+      }
+    }
+    &-left{
+      justify-content: flex-end;
+      left: 0;
+      p{
+        transform: rotate(180deg);
+      }
     }
   }
 }
@@ -599,4 +635,85 @@ header{
       }
     }
   }
+}
+.gallery{
+  display: grid;
+  grid-template-areas: "a b c d";
+  &-item {
+    background-repeat: no-repeat;
+    background-size: cover;
+    &__pic1{
+      height: 340px;
+      grid-area: a;
+      background-image: url(../img/mazzo.jpg);
+      background-position-x: -58px;
+    }
+    &__pic2{
+      grid-area: b;
+      background-image: url(../img/fireplace.jpg);
+      background-position-x: -86px;
+    }
+    &__pic3{
+      grid-area: c;
+      background-image: url(../img/grid3.jpg);
+    }
+    &__pic4{
+      grid-area: d;
+      background-image: url(../img/grid4.jpg);
+      background-position-x: -56px;
+    }
+  }
+}
+
+.contact{
+  padding: 60px 0 90px 0;
+  .form__input{
+    text-align: left;
+
+  }
+  &__textarea{
+    margin: 7px 0;
+  }
+  .subtitle{
+    max-width: 550px;
+    margin: 16px auto 35px auto;
+    text-align: center;
+  }
+  &__navigation{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  &__information{
+    padding: 0;
+    display: flex;
+    list-style-type: none;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1rem;
+    align-items: center;
+    color: rgba(51, 51, 51, 0.5);
+    li{
+      margin: 0 10px 0 0;
+      i{
+        margin-right: 5px;
+        color: #E8C300;
+      }
+    }
+  }
+  &__btn{
+    width: 600%;
+    max-width: 600px;
+  }
+}
+
+footer{
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.9);
+  font-size: 1rem;
+  line-height: 1rem;
+  color: rgba(255, 255, 255, 0.5);
 }
