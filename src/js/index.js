@@ -1,9 +1,6 @@
-$("body").css("overflow-x", "hidden");
-
+// $("body").css("overflow-x", "hidden");
 $(() => {
-
     var $menu_popup = $('.menu-popup');
-
     $(".menu-triger, .menu-close").click(function () {
         if (window.matchMedia('(max-width: 750px)').matches) {
             $menu_popup.slideToggle(300, function () {
@@ -16,10 +13,32 @@ $(() => {
             return false;
         }
     });
-
     $(document).on('click', function (e) {
         if (window.matchMedia('(max-width: 750px)').matches) {
             if (!$(e.target).closest('.menu').length) {
+                $('body').removeClass('body_pointer');
+                $menu_popup.slideUp(300);
+            }
+        }
+    });
+});
+$(() => {
+    var $menu_popup = $('.menu-popup2');
+    $(".menu-triger2, .menu-close2").click(function () {
+        if (window.matchMedia('(max-width: 850px)').matches) {
+            $menu_popup.slideToggle(300, function () {
+                if ($menu_popup.is(':hidden')) {
+                    $('body').removeClass('body_pointer');
+                } else {
+                    $('body').addClass('body_pointer');
+                }
+            });
+            return false;
+        }
+    });
+    $(document).on('click', function (e) {
+        if (window.matchMedia('(max-width: 850px)').matches) {
+            if (!$(e.target).closest('.menu2').length) {
                 $('body').removeClass('body_pointer');
                 $menu_popup.slideUp(300);
             }
@@ -33,6 +52,12 @@ $('.navbar__list-item').click(function () {
 
 $(document).ready(function () {
     $("#navbar").on("click", "a", function (event) {
+        event.preventDefault(); //опустошим стандартную обработку
+        var id = $(this).attr('href'), //заберем айдишник блока с параметром URL
+            top = $(id).offset().top; //определим высоту от начала страницы до якоря
+        $('body,html').animate({scrollTop: top}, 1000); //сделаем прокрутку за 1 с
+    });
+    $("#down-scroll").on("click", "a", function (event) {
         event.preventDefault(); //опустошим стандартную обработку
         var id = $(this).attr('href'), //заберем айдишник блока с параметром URL
             top = $(id).offset().top; //определим высоту от начала страницы до якоря

@@ -13,24 +13,30 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/d3779e6cc5.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
 <header>
     <div class="wrap">
         <nav class="navbar">
-            <ul class="navbar-list">
-                <li class="navbar-list__item"><a href="#">HOME</a></li>
-                <li class="navbar-list__item"><a href="#">ABOUT</a></li>
-                <li class="navbar-list__item"><a href="#">TEAM</a></li>
-                <li class="navbar-list__item navbar-list__item_last-left"><a href="#">BOOKING</a></li>
-            </ul>
-            <ul class="navbar-list">
-                <li class="navbar-list__item navbar-list__item_first-left navbar-list__item_right"><a href="#">MENU</a>
-                </li>
-                <li class="navbar-list__item navbar-list__item_right"><a href="#">GALERIE</a></li>
-                <li class="navbar-list__item navbar-list__item_right"><a href="#">EVENTS</a></li>
-                <li class="navbar-list__item navbar-list__item_right navbar-list__item_last-right"><a
-                        href="#">CONTACT</a></li>
-            </ul>
+            <a href="" class="menu-triger"><i class="fas fa-bars"></i></a>
+            <div class="menu-popup">
+                <a href="" class="menu-close"><i class="far fa-times-circle"></i></a>
+                <ul class="navbar-list">
+                    <li class="navbar-list__item"><a href="#">HOME</a></li>
+                    <li class="navbar-list__item"><a href="#">ABOUT</a></li>
+                    <li class="navbar-list__item"><a href="#">TEAM</a></li>
+                    <li class="navbar-list__item navbar-list__item_last-left"><a href="#">BOOKING</a></li>
+                </ul>
+                <ul class="navbar-list">
+                    <li class="navbar-list__item navbar-list__item_first-left navbar-list__item_right"><a
+                            href="#">MENU</a>
+                    </li>
+                    <li class="navbar-list__item navbar-list__item_right"><a href="#">GALERIE</a></li>
+                    <li class="navbar-list__item navbar-list__item_right"><a href="#">EVENTS</a></li>
+                    <li class="navbar-list__item navbar-list__item_right navbar-list__item_last-right"><a
+                            href="#">CONTACT</a></li>
+                </ul>
+            </div>
         </nav>
         <div class="header">
             <div class="header__time">
@@ -45,18 +51,18 @@
                     <button class="btn header__btn-item btn_yellow">BOOK TABLE</button>
                     <button class="btn header__btn-item">EXPLORE</button>
                 </div>
-                <div class="header__down wrap-icons">
+                <div id="down-scroll" class="header__down wrap-icons">
                     <div class="header__down-circe">
-                        <a href="#"><i class="fas fa-angle-down"></i></a>
+                        <a href="#about"><i class="fas fa-angle-down"></i></a>
                     </div>
                 </div>
                 <div class="header__main-line-top"></div>
                 <div class="header__main-line-bottom"></div>
             </div>
             <div class="header__social">
-                <div class="wrap-icons"><a href="#"><i class="fab fa-facebook-f"></i></a></div>
-                <div class="wrap-icons"><a href="#"><i class="fab fa-twitter"></i></a></div>
-                <div class="wrap-icons"><a href="#"><i class="fab fa-instagram"></i></a></div>
+                <a href="#"><span class="wrap-icons"><i class="fab fa-facebook-f"></i></span></a>
+                <a href="#"><span class="wrap-icons"><i class="fab fa-twitter"></i></span></a>
+                <a href="#"><span class="wrap-icons"><i class="fab fa-instagram"></i></span></a>
             </div>
         </div>
     </div>
@@ -75,7 +81,7 @@
                     semper laoreet.</p>
             </div>
             <div class="image-composition">
-                <div class="image-composition__wrap">
+                <div class="image-composition__wrap image-composition__wrap_position-right">
                     <img class="image-composition__main" src="img/kamig.jpg" alt="">
                 </div>
                 <div class="image-composition__figure"></div>
@@ -84,6 +90,9 @@
     </div>
 </section>
 <section id="team" class="page page_bg-img-tomato">
+    <div class="page__hr page__hr_left"></div>
+    <div class="page__hr page__hr_center"></div>
+    <div class="page__hr page__hr_right"></div>
     <div class="wrap ">
         <div class="container">
             <h3 class="container__title">OUR TEAM</h3>
@@ -132,7 +141,7 @@
                 </form>
             </div>
             <div class="image-composition">
-                <div class="image-composition__wrap">
+                <div class="image-composition__wrap image-composition__wrap_position-right">
                     <img class="image-composition__main" src="img/clock.jpg" alt="">
                 </div>
                 <div class="image-composition__figure "></div>
@@ -145,6 +154,9 @@
     </div>
 </section>
 <section id="specialties" class="page page_bg-img-eggplant">
+    <div class="page__hr page__hr_left"></div>
+    <div class="page__hr page__hr_center"></div>
+    <div class="page__hr page__hr_right"></div>
     <div class="wrap">
         <div class="container">
             <h3 class="container__title">specialties<span class="title__hr"></span></h3>
@@ -214,15 +226,18 @@
             <h2 class="title">DELICIOUS MENU<span class="title__hr"></span></h2>
             <p class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie
                 est a, tempor magna.</p>
-            <ul class="menubar-list">
-                <li class="menubar-list__item">SOUPE</li>
-                <li class="menubar-list__item">PIZZA</li>
-                <li class="menubar-list__item">PASTA</li>
-                <li class="menubar-list__item">DESERT</li>
-                <li class="menubar-list__item">WINE</li>
-                <li class="menubar-list__item">BEER</li>
-                <li class="menubar-list__item menubar-list__item_last">DRINKS</li>
-            </ul>
+            <a href="" class="menu-triger2"><i class="fas fa-bars"></i></a>
+            <div class="menu-popup2">
+                <ul class="menubar-list">
+                    <li class="menubar-list__item">SOUPE</li>
+                    <li class="menubar-list__item">PIZZA</li>
+                    <li class="menubar-list__item">PASTA</li>
+                    <li class="menubar-list__item">DESERT</li>
+                    <li class="menubar-list__item">WINE</li>
+                    <li class="menubar-list__item">BEER</li>
+                    <li class="menubar-list__item menubar-list__item_last">DRINKS</li>
+                </ul>
+            </div>
             <div class="menubar-price">
                 <div class="menubar-price__box">
                     <div class="menubar-price__box-item">
@@ -319,6 +334,9 @@
     </div>
 </section>
 <section id="events" class="page page_bg-img-eggplant">
+    <div class="page__hr page__hr_left"></div>
+    <div class="page__hr page__hr_center"></div>
+    <div class="page__hr page__hr_right"></div>
     <div class="wrap">
         <div class="container">
             <h3 class="container__title">PRIVATE EVENTS</h3>
@@ -330,21 +348,22 @@
                     </div>
                 </div>
                 <div class="image-composition__figure image-composition__figure_position-left"></div>
-
             </div>
 
             <div class="image-composition">
-                <div class="image-composition__wrap">
+                <div class="image-composition__wrap image-composition__wrap_position-right">
                     <img class="image-composition__main" src="img/tableful.jpg" alt="">
                     <div class="image-composition__textarea image-composition__textarea-left">
                         <p>pzrties</p>
                     </div>
                 </div>
                 <div class="image-composition__figure"></div>
-
             </div>
-            <p class="container__footer container__footer_while">For private events please call: +40 729 131 637/+40 726 458 782 or use the
-                contact form.</p>
+            <div class="container__footer container__footer_while">
+                <p>For private events please call: +40 729 131 637/+40 726 458 782 or use the
+                    contact form.</p>
+            </div>
+
         </div>
     </div>
 
@@ -381,7 +400,9 @@
     </div>
 </section>
 <section class="maps">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3296.977006499896!2d-73.96165824135619!3d40.73251752255022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2z0J3RjNGOLdCZ0L7RgNC6LCDQodCo0JA!5e0!3m2!1sru!2s!4v1597960722760!5m2!1sru!2s" width="100%" height="440" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3296.977006499896!2d-73.96165824135619!3d40.73251752255022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2z0J3RjNGOLdCZ0L7RgNC6LCDQodCo0JA!5e0!3m2!1sru!2s!4v1597960722760!5m2!1sru!2s"
+            width="100%" height="440" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+            tabindex="0"></iframe>
 </section>
 <footer>
     <p>© Copyright <span>Mindblister</span> 2020</p>
