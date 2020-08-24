@@ -8,10 +8,11 @@ const cleanCss = require('gulp-clean-css');
 const gulpIf = require('gulp-if');
 const debug = require('gulp-debug');
 const imagemin = require('gulp-imagemin');
+const minify = require('gulp-minify');
 
 const browserSync = require('browser-sync');
 
-const isDevelopment = true;
+const isDevelopment = false;
 const debugInfo = false;
 
 gulp.task('less', () => {
@@ -39,19 +40,26 @@ gulp.task('sass', () => {
         }))
         .pipe(sass().on('error', sass.logError))
         .pipe(concat('style.css'))
-        // .pipe(cleanCss())
+        .pipe(cleanCss())
         .pipe(gulpIf(isDevelopment, sourcemaps.write()))
         .pipe(gulp.dest('public/css'))
         .pipe(browserSync.stream());
 });
 gulp.task('html', () => {
     return gulp.src('src/**/*.html')
-        .pipe(gulp.dest('public'));
+        .pipe(gulp.dest('public'))
+        .pipe(browserSync.stream());
 });
 
 gulp.task('js', () => {
     return gulp.src('src/js/**/*.js')
         .pipe(concat('main.js'))
+        .pipe(minify({
+            ext: {
+                min: '.min.js'
+            },
+            ignoreFiles: ['-min.js']
+        }))
         .pipe(gulp.dest('public/js'));
 });
 gulp.task('php', () => {
@@ -61,6 +69,7 @@ gulp.task('php', () => {
 gulp.task('img', () => {
     return gulp.src('src/img/**/*.+(png|jpg|jpeg|svg)')
         .pipe(imagemin([
+            imagemin.mozjpeg({quality: 75, progressive: true}),
             imagemin.gifsicle(),
             imagemin.optipng(),
             imagemin.svgo()
